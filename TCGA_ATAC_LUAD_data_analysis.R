@@ -1,5 +1,5 @@
 
-#TCGA_ATAC_LUAD_dataanlysis####
+#TCGA_ATAC_LUAD_data_analysis####
 
 #1.TCGA_ATAC_LUAD_prepareData####
 # Set working directory
