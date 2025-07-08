@@ -1,4 +1,4 @@
-# GTEX_TCGA_dataanlysis
+# GTEX_TCGA_dataanalysis
 
 #1.GTEX_TCGA_dataarrange####
 # Load required packages
