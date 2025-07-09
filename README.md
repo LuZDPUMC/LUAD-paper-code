@@ -33,4 +33,8 @@ Uses the TCGAbiolinks package to download TCGA-LUAD mutation data (Masked Somati
 5️⃣ Survival analysis for combined TMB and risk scoreReads risk and TMB files, aligns and merges samples.Determines optimal cutoff for TMB using surv_cutpoint and classifies samples into high TMB (H-TMB) and low TMB (L-TMB).Creates combined groups considering both TMB status and risk score (e.g., H-TMB+high risk).Defines a bioSurvival function to generate survival curves for each group and save them as PDF files, providing both TMB-only and combined TMB-risk group survival curves.
 
 
+# LUAD_Prognostic Model_GSEA_and_immune_related analysis_1.R
+This code comprehensively investigates the relationship between prognostic risk scores and the tumor immune microenvironment in lung adenocarcinoma (LUAD). First, gene set enrichment analysis (GSEA) identifies biological pathways enriched in high- and low-risk groups. Then, ESTIMATE scores are computed to assess the tumor microenvironment and compared between risk groups. Further analyses explore the differences in immune cell infiltration, immune-related functions, and immune checkpoint gene expression, as well as their correlations with risk scores. Survival analyses of immune cell infiltration are performed to evaluate prognostic implications. Additionally, ssGSEA is employed to profile immune-related pathway activities, highlighting immune activity differences across risk groups. Collectively, these analyses elucidate potential immunological mechanisms underlying risk stratification and provide insights for precision immunotherapy.
 
+
+# LUAD_Prognostic Model_GSEA_and_immune_related analysis_2.R
