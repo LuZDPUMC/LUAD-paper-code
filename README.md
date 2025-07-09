@@ -38,3 +38,17 @@ This code comprehensively investigates the relationship between prognostic risk 
 
 
 # LUAD_Prognostic Model_GSEA_and_immune_related analysis_2.R
+This code systematically investigates drug sensitivity, microsatellite instability (MSI), TIDE scores, and immune response profiles between high- and low-risk groups defined by the LUAD (lung adenocarcinoma) prognostic model, aiming to elucidate potential therapeutic vulnerabilities and immune microenvironment heterogeneity.
+
+1️⃣ Drug Sensitivity Analysis
+By integrating TCGA-LUAD gene expression data with drug response data from the GDSC (Genomics of Drug Sensitivity in Cancer) database, the oncoPredict tool was employed to estimate the sensitivity (IC50) of LUAD samples to various anti-cancer drugs. Combined with risk scores, boxplots were generated to visualize and identify drugs with significant differential sensitivity between high- and low-risk groups, providing evidence for potential personalized therapeutic strategies.
+
+2️⃣ MSI Analysis
+Based on MSI (microsatellite instability) status, the distribution of different MSI subtypes (MSS, MSI-L, MSI-H) between risk groups was compared using stacked barplots. Additionally, boxplots were constructed to illustrate risk score distributions across MSI subtypes, revealing associations between MSI status and risk stratification, which may have implications for immunotherapy responsiveness.
+
+3️⃣ TIDE Analysis
+The TIDE (Tumor Immune Dysfunction and Exclusion) framework was utilized to evaluate immune escape potential and dysfunction status between risk groups. Differences in overall TIDE scores, dysfunction, exclusion, CAF, MDSC, TAM M2, IFNG expression, and other immune-related signatures were systematically analyzed using violin plots with statistical comparisons. This analysis provides insights into immune responsiveness and potential sensitivity to immunotherapy in different risk subgroups.
+
+4️⃣ TCIA Immune Response Score Analysis
+Using immunogenicity scores (IPS) from the TCIA (The Cancer Immunome Atlas) database, the study compared IPS values under different combinations of CTLA4 and PD-1 status between risk groups. Violin plots with significance testing were used to depict differences in immune response capacity, offering clues to potential clinical benefits of immune checkpoint inhibitors across risk stratifications.
+
