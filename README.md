@@ -52,3 +52,20 @@ The TIDE (Tumor Immune Dysfunction and Exclusion) framework was utilized to eval
 4️⃣ TCIA Immune Response Score Analysis
 Using immunogenicity scores (IPS) from the TCIA (The Cancer Immunome Atlas) database, the study compared IPS values under different combinations of CTLA4 and PD-1 status between risk groups. Violin plots with significance testing were used to depict differences in immune response capacity, offering clues to potential clinical benefits of immune checkpoint inhibitors across risk stratifications.
 
+
+# LUAD_singlecell_Seurat.R
+This code performs single-cell RNA-seq analysis, including data preprocessing, quality control, dimensionality reduction, clustering, cell type annotation, differential gene expression analysis, and hub gene visualization.
+🟢 01. Data preprocessing and quality control
+Imported the single-cell expression matrix and converted it into a numeric matrix, merging duplicate genes.Created a Seurat object, filtering for genes expressed in at least 10 cells and cells expressing at least 200 genes.Calculated the percentage of mitochondrial genes per cell and generated violin plots showing distributions of gene count, UMI count, and mitochondrial gene percentage.Generated scatter plots to examine correlations between nCount_RNA and percent.mt, and between nCount_RNA and nFeature_RNA, to identify potential doublets or low-quality cells.Filtered out low-quality cells with extreme feature counts or high mitochondrial content.Normalized the data (LogNormalize) and identified highly variable genes.
+
+🔵 02. Data scaling and PCA
+Scaled the data (without centering or scaling) while regressing out orig.ident and percent.mt effects.Performed PCA on the top variable genes, extracting 50 principal components.Plotted PC loadings, PCA scatter plots, heatmaps for top PCs, JackStraw plots, and an elbow plot to select significant principal components.
+
+🟠 03. TSNE clustering and marker gene analysis
+Identified neighbors and performed clustering (FindClusters) based on selected PCs, followed by t-SNE for dimensionality reduction and visualization.Exported TSNE cluster results and visualized sample distributions on TSNE plots.Identified cluster-specific marker genes (FindAllMarkers), filtered significant markers, and exported results.Generated heatmaps and dot plots for the top 5 markers per cluster.For each cluster, generated violin plots, feature plots, and ridge plots of the top 4 marker genes.
+
+🟣 04. Cell type annotation with SingleR
+Annotated clusters using SingleR with reference data (e.g., Human Primary Cell Atlas).Saved cluster annotation results and assigned cell-level annotations.Updated Seurat cluster identities using SingleR annotations and visualized TSNE plots labeled by cell type.Exported normalized expression matrix.Identified and exported differentially expressed genes for each cell type.
+
+🔴 05. Visualization of hub genes
+Imported a list of hub genes and visualized their expression using:Violin plots (distribution across cell types/clusters).Feature plots (spatial expression on t-SNE).Dot plots (expression and percentage of expressing cells).
