@@ -69,3 +69,8 @@ Annotated clusters using SingleR with reference data (e.g., Human Primary Cell A
 
 🔴 05. Visualization of hub genes
 Imported a list of hub genes and visualized their expression using:Violin plots (distribution across cell types/clusters).Feature plots (spatial expression on t-SNE).Dot plots (expression and percentage of expressing cells).
+
+# LUAD_singlecell_CellChat.R
+This code utilizes the CellChat package to systematically construct and analyze cell-cell communication networks from single-cell transcriptomic data. First, it imports and preprocesses the expression matrix and cell annotation data to create a CellChat object, then filters ligand-receptor pairs related to secreted signaling pathways using the human ligand-receptor database. Next, it identifies overexpressed genes and corresponding ligand-receptor interactions, computes communication probabilities between different cell groups, filters out low-frequency communications, and constructs the cell communication network. Subsequently, various visualization methods are employed to display the structure and strength of the communication network, while integrating core gene screening to deeply analyze key communication molecules. Finally, using a specific signaling pathway (e.g., SPP1) as an example, the code reveals detailed communication patterns, signaling roles, and ligand-receptor contributions within the pathway, providing a comprehensive and intuitive framework for functional analysis of cell-cell communication.
+
+
